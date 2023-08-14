@@ -1,0 +1,9 @@
+sudo mkdir /opt/splunk
+cd /opt/splunk
+sudo chown ec2-user /opt/splunk 
+wget -O splunk-9.1.0.1-77f73c9edb85-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.1.0.1/linux/splunk-9.1.0.1-77f73c9edb85-Linux-x86_64.tgz"
+ls
+tar -xzvC /opt -f splunk-9.1.0.1-77f73c9edb85-Linux-x86_64.tgz
+cd bin/
+./splunk status
+./splunk start
